@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitBurn - Calorie Burn Predictor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="landing-body">
+  <header class="header">
+    <div class="container navbar">
+      <div class="logo">
+        <span class="logo-icon">🔥</span>
+        <span class="logo-text">Fit<span class="accent-text">Burn</span></span>
+      </div>
+      <nav class="nav-links">
+        <a href="login.html" class="btn btn-secondary">Sign In</a>
+        <a href="register.html" class="btn btn-primary">Create Account</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="badge">Powered by XGBoost Machine Learning</span>
+        <h1 class="hero-title">Predict Your Caloric Burn with Precision</h1>
+        <p class="hero-description">
+          A production-grade fitness assistant that predicts the exact calories burned during workouts based on key physiological metrics and duration. Track your exercise history and reach your goals.
+        </p>
+        <div class="hero-actions">
+          <a href="register.html" class="btn btn-primary btn-large">Get Started Free</a>
+          <a href="login.html" class="btn btn-secondary btn-large">Access Dashboard</a>
+        </div>
+      </div>
+      <div class="hero-preview">
+        <div class="preview-card">
+          <div class="preview-header">
+            <span class="preview-dot red"></span>
+            <span class="preview-dot yellow"></span>
+            <span class="preview-dot green"></span>
+          </div>
+          <div class="preview-body">
+            <div class="preview-stat">
+              <span class="stat-label">Estimated Burn</span>
+              <span class="stat-value">110.15 <span class="stat-unit">kcal</span></span>
+            </div>
+            <div class="preview-chart">
+              <div class="bar" style="height: 40%"></div>
+              <div class="bar" style="height: 60%"></div>
+              <div class="bar" style="height: 45%"></div>
+              <div class="bar" style="height: 80%"></div>
+              <div class="bar active" style="height: 95%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container text-center">
+      <p>&copy; 2026 FitBurn. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - FitBurn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+  <header class="dashboard-header">
+    <div class="container navbar">
+      <div class="logo">
+        <span class="logo-icon">🔥</span>
+        <span class="logo-text">Fit<span class="accent-text">Burn</span></span>
+      </div>
+      <div class="user-profile">
+        <span class="welcome-msg">Welcome, <strong id="user-name">User</strong></span>
+        <button id="logout-btn" class="btn btn-danger btn-small">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="dashboard-content container">
+    <div class="dashboard-grid">
+      <!-- Left Panel: Form -->
+      <section class="card form-card">
+        <div class="card-header">
+          <h2>Predict Calories</h2>
+          <p class="card-subtitle">Enter workout and physiological metrics</p>
+        </div>
+        <form id="prediction-form" class="prediction-form">
+          <div id="predict-error" class="alert alert-error hidden"></div>
+
+          <div class="form-row">
+            <div class="form-group half">
+              <label for="gender">Gender</label>
+              <select id="gender" required>
+                <option value="" disabled selected>Select</option>
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+              </select>
+            </div>
+            <div class="form-group half">
+              <label for="age">Age (years)</label>
+              <input type="number" id="age" required min="1" max="120" placeholder="e.g. 33">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group half">
+              <label for="height">Height (cm)</label>
+              <input type="number" id="height" required min="50" max="250" placeholder="e.g. 158">
+            </div>
+            <div class="form-group half">
+              <label for="weight">Weight (kg)</label>
+              <input type="number" id="weight" required min="10" max="300" placeholder="e.g. 56">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="duration">Duration (minutes)</label>
+            <input type="number" id="duration" required min="1" max="300" placeholder="e.g. 22">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group half">
+              <label for="heart_rate">Heart Rate (bpm)</label>
+              <input type="number" id="heart_rate" required min="40" max="220" placeholder="e.g. 95">
+            </div>
+            <div class="form-group half">
+              <label for="body_temp">Body Temp (&deg;C)</label>
+              <input type="number" id="body_temp" required step="0.1" min="30" max="45" placeholder="e.g. 40.5">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Calculate Prediction</button>
+        </form>
+      </section>
+
+      <!-- Right Panel: Result & History -->
+      <div class="dashboard-right">
+        <!-- Results Card -->
+        <section class="card result-card">
+          <div class="result-header">
+            <h3>Predicted Calories Burned</h3>
+          </div>
+          <div class="result-body">
+            <div class="result-display">
+              <span id="result-value">--.--</span>
+              <span class="result-unit">kcal</span>
+            </div>
+            <p class="result-timestamp" id="result-time"></p>
+          </div>
+        </section>
+
+        <!-- History Card -->
+        <section class="card history-card">
+          <div class="card-header history-header">
+            <h2>Prediction History</h2>
+            <p class="card-subtitle">Your past calculations</p>
+          </div>
+          <div class="table-wrapper">
+            <table class="history-table">
+              <thead>
+                <tr>
+                  <th>Date &amp; Time</th>
+                  <th>Workout Info</th>
+                  <th>Calories</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="history-body">
+                <tr>
+                  <td colspan="4" class="text-center text-muted py-4">Loading history...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container text-center">
+      <p>&copy; 2026 FitBurn. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

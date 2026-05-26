@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - FitBurn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body">
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <div class="auth-header">
+        <a href="index.html" class="logo justify-center">
+          <span class="logo-icon">🔥</span>
+          <span class="logo-text">Fit<span class="accent-text">Burn</span></span>
+        </a>
+        <h2>Welcome back</h2>
+        <p class="auth-subtitle">Sign in to your account to continue</p>
+      </div>
+
+      <form id="login-form" class="auth-form">
+        <div id="error-message" class="alert alert-error hidden"></div>
+        <div id="success-message" class="alert alert-success hidden"></div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required placeholder="john@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" required placeholder="••••••••">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+      </form>
+
+      <div class="auth-footer">
+        <p>Don't have an account? <a href="register.html">Register</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
