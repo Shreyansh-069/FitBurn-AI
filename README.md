@@ -1,6 +1,7 @@
 # Calorie Predictor App
 
 A full-stack, machine-learning-powered application that predicts calories burned during a workout based on user physical metrics and exercise intensity. The project features a Node.js/Express backend that manages user accounts, session authentication, and history tracking with MongoDB, a Python FastAPI microservice that runs predictions using a trained machine learning model, and a responsive vanilla HTML/CSS/JS frontend dashboard.
+
 ---
 
 ## 🏗️ Project Architecture
